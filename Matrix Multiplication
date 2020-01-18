@@ -1,0 +1,42 @@
+l1 = []
+l2 = []
+result =[]
+row1 = int(input('Enter the no of Rows in 1st Matrix: '))
+col1 = int(input('Enter the no of cols in 1st Matrix: '))
+print("Enter the elements of 1st Matrix")
+for i in range(row1):
+  s1=[]
+  for j in range(col1):
+    s1.append(int(input('Enter the elements: ')))
+  l1.append(s1)
+row2 = int(input('Enter the no of Rows in 2nd Matrix: '))
+col2 = int(input('Enter the no of columns in 2nd Matrix: '))
+print('Enter the Elements of 2nd Matrix')
+for i in range(row2):
+  s1=[]
+  for j in range(col2):
+    s1.append(int(input('Enter the element: ')))
+  l2.append(s1)
+print('The Entered Matrices are: ', end ='\n')
+for i in range(row1):
+  for j in range(col1):
+    print(l1[i][j], end=' ')
+  print()
+
+for i in range(row2):
+  for j in range(col2):
+    print(l2[i][j], end=' ')
+  print()
+for i in range(row1):
+  s1 =[]
+  for j in range(col2):
+    s=0
+    for k in range(col1):
+      s = s + (l1[i][k] * l2[k][j])
+    s1.append(s)
+  result.append(s1)
+print("The multiplication of the given two matrices is: ")
+for i in range(row1):
+  for j in range(col2):
+    print(result[i][j], end=' ')
+  print()
